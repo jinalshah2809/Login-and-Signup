@@ -1,33 +1,85 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Task1 19DCE126</title>
-	<link rel="stylesheet" type="text/css" href="index.css">
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-</head>
-<bodyUPWoKZqMHalM&w=6016&h=4000&q=best%20photo%20for%20background&ved=2ahUKEwiswbKwqoj8AhXrk9gFHVNGAVAQMyhIegQIARB0">
-	<div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
-
-			<div class="signup">
-				<form>
-					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type="text" name="txt" placeholder="User name" required="">
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Sign up</button>
-				</form>
-			</div>
-
-			<div class="login">
-				<form>
-					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Login</button>
-				</form>
-			</div>
-	</div>
-</body>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form in HTML | CodingNepal</title>
+      <link rel="stylesheet" href="index3.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form action="#" class="login">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                  </div>
+               </form>
+               <form action="#" class="signup">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Confirm password" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+   </body>
 </html>
